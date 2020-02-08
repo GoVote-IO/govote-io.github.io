@@ -1,37 +1,19 @@
-## Welcome to GitHub Pages
+# Welcome to Go-Vote.io
 
-You can use the [editor on GitHub](https://github.com/GoVote-IO/govote-io.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+With the uncertainty of electronic voting in the 2016 and after campaigns I had started to think there needed to be some sort of open source voting system. Then came the Iowa Caucuses of 2020, and it became abundantly clear that this is a necessity. This project will be the result. This is going to be a golang based voting system based off goa. It is licensed with Affero GPL, so that it can be constantly publicly audited. The architecture and design is in the initial development phase, so this page will change a lot along the way. Please feel free to watch the repo, report ideas and issues and pull requests. It will take a community to get this right. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Initial Thoughts on Voting Process
+1. Voting Administrator Creates Election
+1. Voting Administrator CRUDS Candidates. 
+1. Voting Administrator Locks and Publishes Election 
+1. Voter walks in to polling location is verified and issues an id(hash, not traceable to actual, id but enough to be a key)
+1. Voter goes to polling station enters key, a ballot is pulled up and a vote occurs. 
+1. The vote is saved to the election server, as well it is shipped to cloud storage on each of the 3 public clouds(Google, Microsoft, Amazon). 
+1. When the polls close, the election admistrator closes the election. 
+1. A job is then run that tallies the vote and publishes it. 
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+## Election Code
+```ruby
+election do {
+} end
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/GoVote-IO/govote-io.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
