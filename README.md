@@ -12,8 +12,22 @@ With the uncertainty of electronic voting in the 2016 and after campaigns I had 
 1. When the polls close, the election admistrator closes the election. 
 1. A job is then run that tallies the vote and publishes it. 
 
+## Projects
+1. (Administration Project)[https://github.com/orgs/GoVote-IO/projects/1] - This project manages what is going on with the administration of the project as a whole. 
+1. (Software Development Project)[https://github.com/orgs/GoVote-IO/projects/2] - This project manages all the related software projects. 
+1. (Admin Repo)[https://github.com/GoVote-IO/govote-io.github.io] - Repository for the website and administration issues. 
+
 ## Election Code
-```ruby
-election do {
-} end
-```
+1. [Election Service](https://github.com/GoVote-IO/govote_election_service) - CRUD Operations For Creating and Running and Elections
+1. [Authentication Service](https://github.com/GoVote-IO/govote_authentication_service) - Service to Authenticate a voter, pollworker and administrator
+1. [Voter Service](https://github.com/GoVote-IO/govote_voter_service) - Service to provide for loading and recording of vote. 
+1. [Election Language](https://github.com/GoVote-IO/election_specific_language) - Election Language Specification
+
+## FAQ
+1. Why GPL? - If we made the service with a less explicit license it could be used without the source, and lessen the integrity of the software being used. 
+1. Why not SAAS? - SAAS would not allow for a strict review of the code being used at the moment. The results could be saved and manipulated in the saas provider before shipping. 
+1. Why 3 cloud providers? - Not only will this guarantee redundancy, but it will allow for independent analysis of the results. 
+1. Could the Russians Hack it? Probably I am not that great a programmer. 
+
+## Contributing
+Wondering how you can help? Well I need it everywhere, from brainstorming to questions to code. Right now this is a single persons crazy idea. Feel free to add github issues on the admin repo and throw out ideas as I go along. 
