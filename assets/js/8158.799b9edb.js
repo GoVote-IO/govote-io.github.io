@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgovote_io_website=self.webpackChunkgovote_io_website||[]).push([[8158],{8158:(e,o,s)=>{s.r(o),s.d(o,{DocSearchModal:()=>a.a1});var a=s(5600)}}]);
