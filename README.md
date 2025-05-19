@@ -1,38 +1,52 @@
-# Welcome to Go-Vote.io
+# GoVote-IO Website
 
-With the uncertainty of electronic voting in the 2016 and after campaigns I had started to think there needed to be some sort of open source voting system. Then came the Iowa Caucuses of 2020, and it became abundantly clear that this is a necessity. This project will be the result. This is going to be a golang based voting system based off goa. It is licensed with Affero GPL, so that it can be constantly publicly audited. The architecture and design is in the initial development phase, so this page will change a lot along the way. Please feel free to watch the repo, report ideas and issues and pull requests. It will take a community to get this right.
+This is the official website for the GoVote-IO project, an open-source voting system initiative created in response to electronic voting concerns in recent elections. The project aims to create a transparent, auditable voting system using Go programming language and the Goa framework.
 
-## Initial Thoughts on Voting Process
+The website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-1. Voting Administrator Creates Election
-1. Voting Administrator CRUDS Candidates.
-1. Voting Administrator Locks and Publishes Election.
-1. Voter walks in to polling location is verified and issues an id(hash, not traceable to actual, id but enough to be a key)
-1. Voter goes to polling station enters key, a ballot is pulled up and a vote occurs.
-1. The vote is saved to the election server, as well it is shipped to cloud storage on each of the 3 public clouds(Google, Microsoft, Amazon).
-1. When the polls close, the election admistrator closes the election.
-1. A job is then run that tallies the vote and publishes it.
+## Project Overview
 
-## Projects
+GoVote-IO is licensed under the GNU Affero General Public License v3 (AGPL-3.0) to ensure public auditability. The system is designed with redundancy and verification in mind, storing vote data across multiple cloud providers to enable independent analysis of results.
 
-1. [Administration Project](https://github.com/orgs/GoVote-IO/projects/1) - This project manages what is going on with the administration of the project as a whole.
-1. [Software Development Project](https://github.com/orgs/GoVote-IO/projects/2) - This project manages all the related software projects.
-1. [Admin Repo](https://github.com/GoVote-IO/govote-io.github.io) - Repository for the website and administration issues.
+## Related Repositories
 
-## Election Code
+The GoVote-IO project consists of multiple repositories:
 
-1. [Election Service](https://github.com/GoVote-IO/govote_election_service) - CRUD Operations For Creating and Running and Elections
-1. [Authentication Service](https://github.com/GoVote-IO/govote_authentication_service) - Service to Authenticate a voter, pollworker and administrator
-1. [Voter Service](https://github.com/GoVote-IO/govote_voter_service) - Service to provide for loading and recording of vote.
-1. [Election Language](https://github.com/GoVote-IO/election_specific_language) - Election Language Specification
+1. **Administration Project**: [https://github.com/orgs/GoVote-IO/projects/1](https://github.com/orgs/GoVote-IO/projects/1) - For overall project administration.
+2. **Software Development Project**: [https://github.com/orgs/GoVote-IO/projects/2](https://github.com/orgs/GoVote-IO/projects/2) - For managing software development.
+3. **Election Service**: [https://github.com/GoVote-IO/govote_election_service](https://github.com/GoVote-IO/govote_election_service) - CRUD operations for creating and running elections.
+4. **Authentication Service**: [https://github.com/GoVote-IO/govote_authentication_service](https://github.com/GoVote-IO/govote_authentication_service) - Service for authenticating voters, poll workers, and administrators.
+5. **Voter Service**: [https://github.com/GoVote-IO/govote_voter_service](https://github.com/GoVote-IO/govote_voter_service) - Service for loading and recording votes.
+6. **Election Language**: [https://github.com/GoVote-IO/election_specific_language](https://github.com/GoVote-IO/election_specific_language) - Specification for the election language.
 
-## FAQ
+## Website Development
 
-1. Why GPL? - If we made the service with a less explicit license it could be used without the source, and lessen the integrity of the software being used.
-1. Why not SAAS? - SAAS would not allow for a strict review of the code being used at the moment. The results could be saved and manipulated in the saas provider before shipping.
-1. Why 3 cloud providers? - Not only will this guarantee redundancy, but it will allow for independent analysis of the results.
-1. Could the Russians Hack it? Probably I am not that great a programmer.
+### Installation
 
-## Contributing
+```
+$ npm install
+```
 
-Wondering how you can help? Well I need it everywhere, from brainstorming to questions to code. Right now this is a single persons crazy idea. Feel free to add github issues on the admin repo and throw out ideas as I/we go along.
+### Local Development
+
+```
+$ npm start
+```
+
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+
+### Build
+
+```
+$ npm run build
+```
+
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+### Deployment
+
+The website is automatically deployed to GitHub Pages when changes are pushed to the master branch.
+
+## Contribution Guidelines
+
+Contributions are welcome in all forms - from brainstorming ideas to submitting code. The project is at an early stage of development and looking for community involvement. Contributors should add GitHub issues on the admin repo to suggest ideas or report problems.

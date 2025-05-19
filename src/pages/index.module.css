@@ -1,0 +1,88 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--ifm-color-primary-darkest), var(--ifm-color-primary));
+}
+
+.heroBanner h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.heroBanner p.hero__subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.heroBanner p.hero__text {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 3rem 1rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Mission Section */
+.missionSection {
+  padding: 4rem 0;
+  background-color: var(--ifm-color-emphasis-100);
+  text-align: center;
+}
+
+.missionTitle {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--ifm-color-primary-dark);
+}
+
+.missionText {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+/* Architecture Section */
+.architectureSection {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.architectureTitle {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--ifm-color-primary-dark);
+}
+
+.architectureText {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.architectureButtons {
+  margin-top: 2rem;
+}
