@@ -40,4 +40,24 @@ Contributions are welcome in all forms - from brainstorming ideas to submitting 
 
 ## Website
 
-This repository uses GitHub Pages with the Jekyll Cayman theme for the GoVote-IO website.
+This repository uses Docusaurus for the GoVote-IO website, deployed via GitHub Pages.
+
+## Branding Guidelines
+
+The GoVote-IO website follows a USA-themed color palette using the official United States flag colors:
+
+- USA Red: #b22234
+- USA Blue: #3c3b6e
+- White: #ffffff
+
+The complete branding guide is available in `docs/branding_guide.md`. When making visual changes to the site:
+
+1. Always reference the branding guide
+2. Use the defined color variables in `src/css/custom.css`
+3. Maintain the patriotic red, white, and blue theme
+4. Ensure accessibility by maintaining proper contrast ratios
+5. Update the branding guide when introducing new design elements
+
+The Makefile includes linting tools to ensure code quality:
+- `make lint-md` - Run markdownlint on markdown files
+- `make lint-commit` - Validate commit messages follow conventional commit format

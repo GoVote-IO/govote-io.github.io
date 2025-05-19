@@ -6,36 +6,222 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  /* Blue palette for GoVote-IO */
-  --ifm-color-primary: #3b82f6; /* blue-500 */
-  --ifm-color-primary-dark: #2563eb; /* blue-600 */
-  --ifm-color-primary-darker: #1d4ed8; /* blue-700 */
-  --ifm-color-primary-darkest: #1e40af; /* blue-800 */
-  --ifm-color-primary-light: #60a5fa; /* blue-400 */
-  --ifm-color-primary-lighter: #93c5fd; /* blue-300 */
-  --ifm-color-primary-lightest: #bfdbfe; /* blue-200 */
+  /* USA Colors - Red, White, and Blue */
+  --usa-red: #b22234; /* USA Flag Red */
+  --usa-blue: #3c3b6e; /* USA Flag Blue */
+  --usa-white: #ffffff; /* White */
+  
+  /* Primary color is USA Blue */
+  --ifm-color-primary: var(--usa-blue);
+  --ifm-color-primary-dark: #323168;
+  --ifm-color-primary-darker: #2b2a5a;
+  --ifm-color-primary-darkest: #22214a;
+  --ifm-color-primary-light: #464584;
+  --ifm-color-primary-lighter: #4d4c91;
+  --ifm-color-primary-lightest: #5655a3;
+  
+  /* Code styling */
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   
   /* Additional custom properties for GoVote-IO */
-  --govote-accent: #ef4444; /* red-500 */
-  --govote-light: #f9fafb; /* gray-50 */
-  --govote-dark: #111827; /* gray-900 */
+  --govote-accent: var(--usa-red);
+  --govote-secondary: #3a86ff; /* lighter blue */
+  --govote-tertiary: #8338ec; /* purple for additional accent */
+  --govote-light: var(--usa-white);
+  --govote-dark: #0a0a24; /* dark navy */
+  
+  /* Navbar styling - Red White and Blue theme */
+  --ifm-navbar-background-color: var(--usa-blue);
+  --ifm-navbar-link-color: var(--usa-white);
+  --ifm-navbar-link-hover-color: #dcdcfc; /* light blue-white */
+  
+  /* Footer styling */
+  --ifm-footer-background-color: var(--usa-blue);
+  --ifm-footer-link-color: var(--usa-white);
+  --ifm-footer-title-color: var(--usa-white);
+  
+  /* Button styling */
+  --ifm-button-background-color: var(--usa-red);
+  --ifm-button-border-color: var(--usa-red);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #60a5fa; /* blue-400 */
-  --ifm-color-primary-dark: #3b82f6; /* blue-500 */
-  --ifm-color-primary-darker: #2563eb; /* blue-600 */
-  --ifm-color-primary-darkest: #1d4ed8; /* blue-700 */
-  --ifm-color-primary-light: #93c5fd; /* blue-300 */
-  --ifm-color-primary-lighter: #bfdbfe; /* blue-200 */
-  --ifm-color-primary-lightest: #dbeafe; /* blue-100 */
+  /* USA Colors - darker/lighter versions for dark mode */
+  --usa-red-dark: #d13545; /* Brighter red for dark mode */
+  --usa-blue-dark: #5c5b8e; /* Lighter blue for dark mode */
+  
+  /* Primary color adjustments for dark mode */
+  --ifm-color-primary: var(--usa-blue-dark);
+  --ifm-color-primary-dark: #4f4e7a;
+  --ifm-color-primary-darker: #46466d;
+  --ifm-color-primary-darkest: #3a3a5a;
+  --ifm-color-primary-light: #6969a0;
+  --ifm-color-primary-lighter: #7777ae;
+  --ifm-color-primary-lightest: #8686bd;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   
   /* Additional custom properties for GoVote-IO in dark mode */
-  --govote-accent: #f87171; /* red-400 */
-  --govote-light: #f9fafb; /* gray-50 */
-  --govote-dark: #111827; /* gray-900 */
+  --govote-accent: var(--usa-red-dark);
+  --govote-secondary: #5d9aff; /* lighter blue for dark mode */
+  --govote-tertiary: #9b55ff; /* lighter purple for dark mode */
+  --govote-light: #ffffff; /* white */
+  --govote-dark: #0a0a24; /* dark navy */
+  
+  /* Navbar styling in dark mode - still USA themed */
+  --ifm-navbar-background-color: #1c1c42; /* slightly lighter navy */
+  
+  /* Footer styling in dark mode */
+  --ifm-footer-background-color: #1c1c42; /* slightly lighter navy */
+  --ifm-footer-title-color: var(--usa-white);
+  
+  /* Button styling in dark mode */
+  --ifm-button-background-color: var(--usa-red-dark);
+  --ifm-button-border-color: var(--usa-red-dark);
+}
+
+/* Custom Elements Styling */
+
+/* Hero section styling - USA Theme */
+.hero {
+  background: linear-gradient(135deg, var(--usa-blue) 0%, #2b2a66 100%);
+  color: var(--usa-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: var(--usa-red);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: var(--usa-red);
+}
+
+.hero__subtitle {
+  color: #e0e0ff;
+}
+
+.hero__title {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Card styling - USA Theme */
+.card {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-top: 3px solid var(--usa-red);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Feature section styling */
+.features {
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureImage {
+  height: 200px;
+  width: 200px;
+}
+
+/* USA-themed button styling */
+.button {
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+.button--primary {
+  background-color: var(--usa-red);
+  border-color: var(--usa-red);
+  color: white;
+}
+
+.button--primary:hover {
+  background-color: #c42b3d;
+  border-color: #c42b3d;
+}
+
+.button--secondary {
+  background-color: var(--usa-blue);
+  border-color: var(--usa-blue);
+  color: white;
+}
+
+.button--secondary:hover {
+  background-color: #464584;
+  border-color: #464584;
+}
+
+.button--outline {
+  color: var(--usa-blue);
+  border-color: var(--usa-blue);
+}
+
+.button--outline:hover {
+  background-color: var(--usa-blue);
+  color: white;
+}
+
+/* Badge/Tag styling - USA Theme */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: var(--usa-red);
+  color: white;
+  margin-right: 0.5rem;
+}
+
+.badge--secondary {
+  background-color: var(--usa-blue);
+}
+
+.badge--tertiary {
+  background-color: var(--govote-tertiary);
+}
+
+/* USA-themed alternative for alternating sections */
+.section--alt {
+  background-color: #f5f7ff; /* Very light blue */
+}
+
+[data-theme='dark'] .section--alt {
+  background-color: #1a1a38; /* Darker navy in dark mode */
+}
+
+/* Footer styling enhancement */
+.footer {
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--usa-red);
 }

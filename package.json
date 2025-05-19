@@ -1,6 +1,6 @@
 {
-  "name": "docs",
-  "version": "0.0.0",
+  "name": "govote-io-website",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -12,21 +12,37 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "test": "jest",
+    "lint": "eslint . && markdownlint '**/*.md'",
+    "lint:md": "markdownlint '**/*.md'",
+    "lint:commit": "cat PR_MESSAGE.md | commitlint || echo 'Commit message validation failed'"
   },
   "dependencies": {
     "@docusaurus/core": "3.7.0",
+    "@docusaurus/plugin-content-docs": "^3.7.0",
     "@docusaurus/preset-classic": "3.7.0",
     "@mdx-js/react": "^3.0.0",
+    "clean-css": "^5.3.3",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.0.0",
+    "@commitlint/config-conventional": "^19.0.0",
     "@docusaurus/module-type-aliases": "3.7.0",
     "@docusaurus/tsconfig": "3.7.0",
     "@docusaurus/types": "3.7.0",
+    "@testing-library/jest-dom": "^6.2.0",
+    "@testing-library/react": "^16.3.0",
+    "@types/jest": "^29.5.11",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "markdownlint-cli": "^0.38.0",
     "typescript": "~5.6.2"
   },
   "browserslist": {
@@ -42,6 +58,6 @@
     ]
   },
   "engines": {
-    "node": ">=18.0"
+    "node": ">=18.0 <=23.x"
   }
 }
