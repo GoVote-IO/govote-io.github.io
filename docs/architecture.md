@@ -199,20 +199,14 @@ Security is built into every layer of the architecture:
 
 GoVote-IO supports multiple deployment models to meet the needs of different jurisdictions:
 
-### Cloud-Based Deployment
-- **Architecture**: Full Kubernetes-based deployment
-- **Providers**: Support for AWS, Azure, and Google Cloud
-- **Scalability**: Horizontal scaling for high-demand periods
-- **Management**: Centralized management via Infrastructure as Code
-- **Security**: Cloud-native security controls with enhanced protections
+## Deployment Options
 
-### On-Premises Deployment
-- **Hardware Requirements**: Standard x86 servers with sufficient redundancy
-- **Orchestration**: Lightweight Kubernetes (K3s) for resource efficiency
-- **Network**: Secure internal network with controlled external access
-- **Backup**: Local and offsite backup capabilities
-- **Security**: Hardened configurations with physical security controls
+The table below summarizes the key features of the supported deployment models:
 
+| Deployment Model      | Architecture                     | Providers                     | Scalability                     | Management                              | Security                                   |
+|-----------------------|----------------------------------|-------------------------------|----------------------------------|-----------------------------------------|-------------------------------------------|
+| **Cloud-Based**       | Full Kubernetes-based deployment| AWS, Azure, Google Cloud      | Horizontal scaling for high-demand periods | Centralized via Infrastructure as Code | Cloud-native security controls with enhanced protections |
+| **On-Premises**       | Lightweight Kubernetes (K3s)    | Local hardware                | Limited to local resources      | Local management with physical access  | Hardened configurations with physical security controls |
 ### Hybrid Deployment
 - **Architecture**: Core services on-premises with cloud backup
 - **Data Flow**: Primary operations on local hardware, replication to cloud
