@@ -78,7 +78,7 @@ const config: Config = {
       title: 'GoVote-IO',
       logo: {
         alt: 'GoVote-IO Logo',
-        src: 'img/logo.svg',
+        src: 'assets/logos/primary_logo.png',
       },
       items: [
         {
