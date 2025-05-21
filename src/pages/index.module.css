@@ -11,6 +11,18 @@
   background: linear-gradient(135deg, var(--ifm-color-primary-darkest), var(--ifm-color-primary));
 }
 
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.logoImage {
+  height: 120px;
+  width: auto;
+  margin-bottom: 1rem;
+}
+
 .heroBanner h1 {
   font-size: 3rem;
   margin-bottom: 1rem;

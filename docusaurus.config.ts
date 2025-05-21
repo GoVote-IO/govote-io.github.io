@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'GoVote-IO',
   tagline: 'An open-source, secure, and transparent voting system',
-  favicon: 'img/favicon.ico',
+  favicon: 'assets/logos/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://govote-io.github.io',
@@ -65,8 +65,8 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    // Project's social card
+    image: 'assets/logos/social_media_icon.png',
     // Enable search
     algolia: {
       appId: 'YOUR_APP_ID', // Replace with actual values when setting up Algolia
@@ -79,6 +79,7 @@ const config: Config = {
       logo: {
         alt: 'GoVote-IO Logo',
         src: 'assets/logos/primary_logo.png',
+        srcDark: 'assets/logos/dark_mode_logo.png',
       },
       items: [
         {
